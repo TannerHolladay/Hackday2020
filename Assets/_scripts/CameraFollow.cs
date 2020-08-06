@@ -8,8 +8,8 @@ public class CameraFollow : MonoBehaviour
   public Vector3 offset;
   public float followSpeed;
 
- 
-  void Update ()
+
+  void FixedUpdate ()
   {
       Vector3 target = new Vector3 (player.position.x + offset.x, player.position.y + offset.y, offset.z);
       Vector3 currentPos = Vector3.Lerp(transform.position, target, followSpeed);
